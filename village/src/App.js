@@ -48,10 +48,16 @@ class App extends Component {
           </div>
         </nav>
 
-        <SmurfForm
-          path='/smurf-form'  
-          handleData={this.handleData}
+        <Route 
+          path='/smurf-form' 
+          render={props => (
+            <SmurfForm
+              path='/smurf-form'  
+              handleData={this.handleData}
+            />
+          )} 
         />
+        
 
         <Route
           exact 
